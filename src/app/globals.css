@@ -3,31 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --scrollbar-color: rgba(0, 0, 0, 0.3);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+:root.dark {
+  --scrollbar-color: rgba(255, 255, 255, 0.3);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+html {
+  -webkit-tap-highlight-color: transparent;
+  scrollbar-gutter: stable;
+  scrollbar-color: var(--scrollbar-color) transparent;
+  scrollbar-width: thin;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* fix radix dropdown-menu layout shift */
+html body[data-scroll-locked] {
+  margin-right: 0 !important;
 }
