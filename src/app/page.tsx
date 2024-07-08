@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className="px-6 py-16">
+      <div className="px-6 py-16 font-light">
         <section className="flex h-full flex-col items-center justify-center pt-20">
           <div className="flex w-full max-w-lg flex-col items-center justify-center text-center">
             <h1 className="relative mb-4 text-4xl font-medium text-zinc-950 dark:text-zinc-50">
@@ -39,7 +39,7 @@ export default function Home() {
               </Button>
             </a>
           </div>
-          <span className="mt-2 text-center text-sm text-zinc-500 dark:text-zinc-400">
+          <span className="mt-2 font-normal text-center text-sm text-zinc-500 dark:text-zinc-400">
             Coming August 2024
           </span>
         </section>
@@ -54,7 +54,7 @@ export default function Home() {
           </div>
         </section>
         <section className="mx-auto text-center max-w-3xl">
-          <span className="text-center text-sm text-zinc-500 dark:text-zinc-400">
+          <span className="text-center font-normal text-sm text-zinc-500 dark:text-zinc-400">
             by <a href="https://github.com/duongdev" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 text-zinc-50">Dustin Do</a> & <a href="https://github.com/bkdev98" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 text-zinc-50">Quoc Khanh</a>
           </span>
         </section>
