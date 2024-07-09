@@ -9,7 +9,7 @@ export function Button({
     primary:
       "bg-zinc-950 hover:bg-zinc-800 text-zinc-50",
     secondary:
-      "hover:bg-zinc-700 bg-zinc-100 hover:bg-zinc-300 text-zinc-950 border-zinc-900",
+      " bg-zinc-100 hover:bg-zinc-300 text-zinc-950 border-zinc-900",
   };
 
   return (
