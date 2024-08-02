@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input"
 import { Turnstile } from "@marsidev/react-turnstile"
 import { FormEvent, useState } from "react"
 import { usePostHog } from "posthog-js/react"
+import { createPeople, findPeople } from "../api/people"
 
 export default function WaitlistPage() {
   const posthog = usePostHog()
@@ -17,6 +18,7 @@ export default function WaitlistPage() {
     name: "",
     email: "",
   })
+  const [loading, setLoading] = useState(false)
 
   const onChange = (event: any) => {
     const { name, value } = event.target
@@ -24,8 +26,18 @@ export default function WaitlistPage() {
   }
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    setLoading(true)
     event.preventDefault()
 
+    const people = await findPeople(formData.email)
+    if (people?.length === 0) {
+      await createPeople({
+        email: formData.email,
+        name: formData.name,
+      })
+    }
+
+    setLoading(false)
     posthog?.capture("waitlist_user_added", {
       properties: formData,
       distinctId: formData?.email,
@@ -71,7 +83,7 @@ export default function WaitlistPage() {
               <Turnstile
                 className="w-full md:w-1/2 justify-self-center	"
                 options={{ size: showTurnstitle }}
-                siteKey={turnstileSiteKey}
+                siteKey={"1x00000000000000000000AA"}
                 onError={() => {
                   setShowTurnstitle("normal")
                 }}
@@ -85,7 +97,7 @@ export default function WaitlistPage() {
             )}
             <Button
               type="submit"
-              disabled={!verifiedTurnstitle}
+              disabled={!verifiedTurnstitle || loading}
               className="rounded-md md:w-1/4 w-1/3 text-xs"
             >
               Join Waitlist

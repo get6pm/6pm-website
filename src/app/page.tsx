@@ -1,7 +1,6 @@
 import { Button } from "@/components/button"
 import { Header } from "@/components/header"
 import { GithubIcon } from "@/components/icons/github"
-import { ProductHuntIcon } from "@/components/icons/product-hunt"
 import Link from "next/link"
 
 export default function Home() {
@@ -56,16 +55,16 @@ export default function Home() {
         </section>
         <section className="mx-auto text-center max-w-3xl">
           <span className="text-center font-normal text-sm text-zinc-500 dark:text-zinc-400">
-            by
+            by{" "}
             <a
               href="https://github.com/duongdev"
               target="_blank"
               rel="noopener noreferrer"
               className="underline underline-offset-4 text-zinc-50"
             >
-              Dustin Do
+              Dustin Do{" "}
             </a>
-            &
+            &{" "}
             <a
               href="https://github.com/bkdev98"
               target="_blank"
