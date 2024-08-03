@@ -6,6 +6,7 @@ import { Turnstile } from "@marsidev/react-turnstile"
 import { FormEvent, useState } from "react"
 import { usePostHog } from "posthog-js/react"
 import { createPeople, findPeople } from "../api/people"
+import { MailIcon, UserIcon } from "lucide-react"
 
 export default function WaitlistPage() {
   const posthog = usePostHog()
@@ -64,12 +65,17 @@ export default function WaitlistPage() {
     <>
       <Header />
       <section className="flex flex-col h-screen justify-center items-center ">
-        <div className="flex flex-col justify-center items-center p-5 bg-inherite md:w-1/2 w-full">
-          <p className="bg-gradient-to-r from-zinc-100 to-zinc-700 text-transparent bg-clip-text p-5 md:text-4xl text-4xl font-bold text-center">
-            Join The Waitlist 6pm Today!
-          </p>
+        <div className="flex flex-col  max-w-lg justify-center items-center p-5 bg-inherite md:w-1/2 w-full">
+          <div className="p-5">
+            <p className="bg-gradient-to-r from-zinc-100 to-zinc-700 text-transparent bg-clip-text  md:text-4xl text-4xl font-bold text-center">
+              Join The Waitlist
+            </p>
+            <p className="bg-gradient-to-r from-orange-500 via-pink-500 to-indigo-500  text-transparent bg-clip-text  md:text-4xl text-4xl font-bold text-center">
+              for 6pm Today!
+            </p>
+          </div>
 
-          <p className="text-zinc-500 md:text-md sm:text-sm text-center">
+          <p className="text-center text-muted-foreground">
             Be among the first to experience the revolutionary AI Financial
             Assistant that will transform the way you manage your expenses and
             budgets.
@@ -77,27 +83,29 @@ export default function WaitlistPage() {
 
           <form
             onSubmit={onSubmit}
-            className="flex flex-col items-center w-full py-5 space-y-2"
+            className="flex flex-col items-center w-full max-w-xs py-5 space-y-2"
           >
             <Input
+              startIcon={UserIcon}
               name="name"
               required={true}
               type="text"
               placeholder="Your full name"
-              className="w-full md:w-1/2 bg-inherite"
+              className="h-12 w-full transition-opacity text-zinc-950 dark:text-zinc-200 dark:hover:text-zinc-200  dark:border-zinc-800  dark:focus:bg-zinc-800 dark:hover:bg-zinc-800"
               onChange={onChange}
             />
             <Input
+              startIcon={MailIcon}
               name="email"
               onChange={onChange}
               required={true}
               type="email"
               placeholder="Your email address"
-              className="w-full md:w-1/2 bg-inherite"
+              className="h-12 w-full transition-opacity text-zinc-950 dark:text-zinc-200 dark:hover:text-zinc-200  dark:border-zinc-800  dark:focus:bg-zinc-800 dark:hover:bg-zinc-800"
             />
             {turnstileSiteKey && (
               <Turnstile
-                className="w-full md:w-1/2 justify-self-center	"
+                className="w-full md:w-1/2 justify-self-center"
                 options={{ size: showTurnstitle }}
                 siteKey={"1x00000000000000000000AA"}
                 onError={() => {
@@ -115,9 +123,9 @@ export default function WaitlistPage() {
             <Button
               type="submit"
               disabled={!verifiedTurnstitle || loading}
-              className="rounded-md md:w-1/4 w-1/3 text-xs"
+              className="rounded-md h-12 w-full"
             >
-              Join Waitlist
+              Notify me on Launch
             </Button>
           </form>
         </div>

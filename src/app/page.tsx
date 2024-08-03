@@ -22,7 +22,7 @@ export default function Home() {
           </div>
           <div className="flex items-center space-x-4 py-6">
             <Link href="/waitlist">
-              <Button variant="secondary">Join Waitlist</Button>
+              <Button variant="secondary">Get 6pm</Button>
             </Link>
             <a
               href="https://github.com/sixpm-ai/6pm"
