@@ -1,6 +1,8 @@
 "use server"
 import { getFirstNameAndLastNameFromHandleAndDisplayName } from "@/lib/utils"
-import { TWENTY_API_KEY, TWENTY_API_URL } from "../constant"
+
+const TWENTY_API_KEY = process.env.TWENTY_API_KEY
+const TWENTY_API_URL = process.env.TWENTY_API_URL
 
 export async function findPeople(email: string) {
   try {

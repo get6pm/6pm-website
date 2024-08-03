@@ -19,6 +19,7 @@ export default function WaitlistPage() {
     email: "",
   })
   const [loading, setLoading] = useState(false)
+  const [token, setToken] = useState<string>()
 
   const onChange = (event: any) => {
     const { name, value } = event.target
@@ -29,19 +30,34 @@ export default function WaitlistPage() {
     setLoading(true)
     event.preventDefault()
 
-    const people = await findPeople(formData.email)
-    if (people?.length === 0) {
-      await createPeople({
-        email: formData.email,
-        name: formData.name,
+    const validatedTurnstile = await fetch("/api/verify", {
+      method: "POST",
+      body: JSON.stringify({ token }),
+      headers: {
+        "content-type": "application/json",
+      },
+    })
+
+    const data = await validatedTurnstile.json()
+
+    if (data.success || process.env.NODE_ENV === "development") {
+      // the token has been validated
+      const people = await findPeople(formData.email)
+      if (people?.length === 0) {
+        await createPeople({
+          email: formData.email,
+          name: formData.name,
+        })
+
+        alert("Thank you for registering on our waitlist!")
+      }
+
+      setLoading(false)
+      posthog?.capture("waitlist_user_added", {
+        properties: formData,
+        distinctId: formData?.email,
       })
     }
-
-    setLoading(false)
-    posthog?.capture("waitlist_user_added", {
-      properties: formData,
-      distinctId: formData?.email,
-    })
   }
 
   return (
@@ -90,8 +106,9 @@ export default function WaitlistPage() {
                 onBeforeInteractive={() => {
                   setShowTurnstitle("normal")
                 }}
-                onSuccess={() => {
+                onSuccess={(successToken) => {
                   setVerifiedTurnstitle(true)
+                  setToken(successToken)
                 }}
               />
             )}
