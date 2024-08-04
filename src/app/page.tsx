@@ -1,13 +1,10 @@
 import { Button } from "@/components/button"
-import { Header } from "@/components/header"
 import { GithubIcon } from "@/components/icons/github"
 import Link from "next/link"
 
 export default function Home() {
   return (
-    <>
-      <Header />
-      <div className="px-6 py-16 font-light">
+      <div className="px-6 py-16 font-light animate-in fade-in duration-300">
         <section className="flex h-full flex-col items-center justify-center pt-20">
           <div className="flex w-full max-w-lg flex-col items-center justify-center text-center">
             <h1 className="relative mb-4 text-4xl font-medium text-zinc-950 dark:text-zinc-50">
@@ -22,7 +19,7 @@ export default function Home() {
           </div>
           <div className="flex items-center space-x-4 py-6">
             <Link href="/waitlist">
-              <Button variant="secondary">Get 6pm</Button>
+              <Button variant="secondary">Get 6pm for Free</Button>
             </Link>
             <a
               href="https://github.com/sixpm-ai/6pm"
@@ -76,6 +73,5 @@ export default function Home() {
           </span>
         </section>
       </div>
-    </>
   )
 }
