@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@marsidev/react-turnstile": "^0.7.2",
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-tooltip": "^1.1.2",
@@ -19,6 +20,7 @@
     "framer-motion": "^11.3.2",
     "lucide-react": "^0.407.0",
     "next": "14.2.4",
+    "posthog-js": "^1.151.2",
     "react": "^18",
     "react-dom": "^18",
     "react-hotkeys-hook": "^4.5.0",
