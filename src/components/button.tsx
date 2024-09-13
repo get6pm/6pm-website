@@ -7,7 +7,7 @@ export function Button({
 }: {
 	children: React.ReactNode;
 	variant?: "primary" | "secondary";
-	className: string;
+	className?: string;
 }) {
 	const buttonVariants = {
 		primary: "bg-zinc-800 hover:bg-zinc-800 text-zinc-50",
