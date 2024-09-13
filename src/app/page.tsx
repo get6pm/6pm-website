@@ -75,7 +75,7 @@ export default function Home() {
 			<div className="flex justify-center flex-wrap w-full py-20">
 				<div className="flex max-w-4xl items-start flex-col space-y-10">
 					<section className="flex w-full flex-col">
-						<div className="flex flex-col w-full font-bold md:text-7xl text-5xl space-y-5">
+						<div className="flex flex-col w-full font-bold md:text-8xl text-6xl space-y-5">
 							<h1 className="text-zinc-950 dark:text-zinc-50">Finance</h1>
 							<h1 className=" text-zinc-700 dark:text-zinc-300">
 								Intelligence.
