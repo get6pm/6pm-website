@@ -29,10 +29,10 @@ export default function Home() {
 	return (
 		<div className="px-6 md:py-16 py-10 font-light animate-in fade-in duration-300">
 			<div className="flex justify-center">
-				<div className="flex md:flex-row flex-col max-w-4xl">
-					<section className="flex h-full flex-col pt-20">
-						<div className="flex w-full max-w-lg flex-col md:items-start items-center space-y-6 md:space-y-5">
-							<h1 className="relative text-5xl font-medium text-zinc-950 dark:text-zinc-50">
+				<div className="flex md:flex-row flex-col max-w-4xl w-full">
+					<section className="flex h-full flex-col pt-20 md:w-2/3 w-full">
+						<div className="flex flex-col md:items-start items-center space-y-6 md:space-y-5">
+							<h1 className="md:text-6xl text-5xl font-medium text-zinc-950 dark:text-zinc-50">
 								Manage your expenses & budgets seamlessly.
 							</h1>
 							<p className="text-zinc-600 dark:text-zinc-400 ">
@@ -42,22 +42,20 @@ export default function Home() {
 								href="https://apps.apple.com/vn/app/6pm-finance-intelligence/id6504689878"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="mt-4 "
+								className="mt-4"
 							>
 								<Button variant="secondary" className="h-12">
 									<Apple className="h-4 w-4 mr-1.5 dark:fill-white" />
 									<div className="flex flex-col ml-2 text-left leading-3">
-										<div className="text-xs font-bold">Download on the</div>
-										<div className="text-xl leading-4 text-extrabold">
-											App Store
-										</div>
+										<div className="text-md font-bold">Download on the</div>
+										<div className="text-lg leading-4 text-bold">App Store</div>
 									</div>
 								</Button>
 							</a>
 						</div>
 					</section>
 
-					<section className="mx-auto max-w-3xl md:py-20 py-10">
+					<section className="mx-auto max-w-3xl md:w-1/3 w-full md:py-20 py-10 px-5">
 						<div className="relative -mx-6 sm:mx-0">
 							<div className="pointer-events-none absolute left-0 top-[-100px] z-[-1] h-full w-full bg-[radial-gradient(100%_100%_at_50%_50%,hsl(0deg_0%_100%/8%)_0,hsl(0deg_0%_100%/2%)_50%)] blur-2xl md:left-[-100px] md:h-[calc(100%+200px)] md:w-[calc(100%+200px)]" />
 							<div className="flex items-center justify-center ">
@@ -76,8 +74,8 @@ export default function Home() {
 				<div className="flex max-w-4xl items-start flex-col space-y-10">
 					<section className="flex w-full flex-col">
 						<div className="flex flex-col w-full font-bold md:text-8xl text-6xl space-y-5">
-							<h1 className="text-zinc-950 dark:text-zinc-50">Finance</h1>
-							<h1 className=" text-zinc-700 dark:text-zinc-300">
+							<h1 className="text-gray-100">Finance</h1>
+							<h1 className=" text-gray-200">
 								Intelligence.
 							</h1>
 						</div>

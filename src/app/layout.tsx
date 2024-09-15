@@ -1,13 +1,13 @@
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Be_Vietnam_Pro } from "next/font/google";
+import { Inter } from "next/font/google";
 import { PHProvider } from "@/components/PHProvider";
 import { Header } from "@/components/header";
 
-const beVietnamPro = Be_Vietnam_Pro({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+const beVietnamPro = Inter({
+	subsets: ["latin"],
+	weight: ["300", "400", "500", "600"],
 });
 
 export const metadata: Metadata = {
