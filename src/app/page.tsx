@@ -32,10 +32,10 @@ export default function Home() {
 				<div className="flex md:flex-row flex-col max-w-4xl w-full">
 					<section className="flex h-full flex-col pt-20 md:w-2/3 w-full">
 						<div className="flex flex-col md:items-start items-center space-y-6 md:space-y-5">
-							<h1 className="md:text-6xl text-5xl font-medium text-zinc-950 dark:text-zinc-50">
+							<h1 className="md:text-6xl text-5xl font-medium text-foreground">
 								Manage your expenses & budgets seamlessly.
 							</h1>
-							<p className="text-zinc-600 dark:text-zinc-400 ">
+							<p className="text-muted-foreground">
 								We've just launched! Get your AI finance assistant for free.
 							</p>
 							<a
@@ -44,11 +44,13 @@ export default function Home() {
 								rel="noopener noreferrer"
 								className="mt-4"
 							>
-								<Button variant="secondary" className="h-12">
-									<Apple className="h-4 w-4 mr-1.5 dark:fill-white" />
-									<div className="flex flex-col ml-2 text-left leading-3">
-										<div className="text-md font-bold">Download on the</div>
-										<div className="text-lg leading-4 text-bold">App Store</div>
+								<Button variant="secondary" className="h-14 space-x-2">
+									<Apple className="h-4 w-4 dark:fill-white" />
+									<div className="flex flex-col text-left font-bold leading-5 ">
+										<div>Download on the</div>
+										<div className="text-xl leading-4 tracking-wider">
+											App Store
+										</div>
 									</div>
 								</Button>
 							</a>
@@ -74,10 +76,8 @@ export default function Home() {
 				<div className="flex max-w-4xl items-start flex-col space-y-10">
 					<section className="flex w-full flex-col">
 						<div className="flex flex-col w-full font-bold md:text-8xl text-6xl space-y-5">
-							<h1 className="text-gray-100">Finance</h1>
-							<h1 className=" text-gray-200">
-								Intelligence.
-							</h1>
+							<h1 className="text-foreground">Finance</h1>
+							<h1 className=" text-muted-foreground">Intelligence.</h1>
 						</div>
 					</section>
 
@@ -85,10 +85,10 @@ export default function Home() {
 						{features.map(({ name, imageSrc, key }) => (
 							<div className="flex w-1/2 md:w-1/4 p-2" key={key}>
 								<div className="relative h-full">
-									<div className="bg-zinc-800 rounded-2xl md:rounded-3xl h-full bg-opacity-20 overflow-hidden">
+									<div className="bg-muted-background border-muted-foreground border rounded-2xl md:rounded-3xl h-full bg-opacity-20 overflow-hidden">
 										<img src={imageSrc} alt={key} />
 									</div>
-									<div className="absolute bottom-0 left-0 right-0 pb-4 text-center md:text-lg text-xs text-zinc-50 font-bold">
+									<div className="absolute bottom-0 left-0 right-0 pb-4 text-center md:text-lg text-xs text-foreground font-bold">
 										{name}
 									</div>
 								</div>
@@ -97,7 +97,7 @@ export default function Home() {
 					</section>
 
 					<section className="max-w-xl">
-						<div className="text-zinc-700 dark:text-zinc-300 text-xl">
+						<div className="text-muted-foreground text-xl">
 							Track your expenses, set financial goals, scan receipts and get
 							personalized insights to helps you make better financial
 							decisions.
@@ -111,7 +111,7 @@ export default function Home() {
 					<div className="flex w-full flex-col space-y-10">
 						<section className="flex w-full flex-col">
 							<div className="flex flex-row space-x-10 items-center">
-								<div className="text-zinc-700 dark:text-zinc-50 text-5xl font-medium leading-tight">
+								<div className="text-foreground text-5xl font-medium leading-tight">
 									Get 6pm
 									<br /> for Free.
 								</div>
@@ -131,7 +131,7 @@ export default function Home() {
 						</section>
 
 						<section>
-							<div className="text-zinc-600 dark:text-zinc-400 text-xl">
+							<div className="text-muted-foreground text-xl">
 								6pm is free to download and use. We offer premium subscription
 								plans for advanced features, primarily to cover AI server costs,
 								starting at just $1.99 per month. 6pm is proudly{" "}
@@ -171,13 +171,11 @@ export default function Home() {
 			<div className="flex justify-center pt-50">
 				<div className="flex max-w-4xl w-full items-start justify-between">
 					<section>
-						<div className="text-zinc-600 dark:text-zinc-400">
-							Copyright © 6pm • 2024.
-						</div>
+						<div className="text-muted-foreground">Copyright © 6pm • 2024.</div>
 					</section>
 
 					<section>
-						<a href="/privacy-policy" className="text-zinc-50">
+						<a href="/privacy-policy" className="text-foreground">
 							Privacy Policy
 						</a>
 					</section>

@@ -10,7 +10,7 @@ export function Button({
 	className?: string;
 }) {
 	const buttonVariants = {
-		primary: "bg-zinc-800 hover:bg-zinc-800 text-zinc-50",
+		primary: "bg-muted-foreground hover:bg-muted-background text-foreground",
 		secondary: "bg-zinc-100 hover:bg-zinc-300 text-zinc-950 border-zinc-900",
 	};
 
