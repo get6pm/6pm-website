@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       {!isDev ? <Analytics /> : null}
       <PHProvider>
-        <body className={`${beVietnamPro.className} bg-white dark:bg-zinc-900`}>
+        <body className={`${beVietnamPro.className} bg-white dark:bg-background`}>
           <div className="isolate min-h-screen">
             <Header />
             {children}

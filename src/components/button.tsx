@@ -10,15 +10,15 @@ export function Button({
 	className?: string;
 }) {
 	const buttonVariants = {
-		primary: "bg-muted-foreground hover:bg-muted-background text-foreground",
-		secondary: "bg-zinc-100 hover:bg-zinc-300 text-zinc-950 border-zinc-900",
+		primary: "bg-muted-background text-foreground",
+		secondary: "bg-foreground text-muted-background",
 	};
 
 	return (
 		<button
 			type="button"
 			className={cn(
-				"inline-flex font-normal items-center rounded-md px-2.5 h-10 text-sm",
+				"inline-flex font-normal items-center rounded-lg px-2.5 h-10 text-sm",
 				buttonVariants[variant],
 				className,
 			)}

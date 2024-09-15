@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components/button";
 import { Apple } from "@/components/icons/apple";
+import { IOS_STORE_URL } from "@/lib/constant";
 
 const features = [
 	{
@@ -32,7 +33,7 @@ export default function Home() {
 				<div className="flex md:flex-row flex-col max-w-4xl w-full">
 					<section className="flex h-full flex-col pt-20 md:w-2/3 w-full">
 						<div className="flex flex-col md:items-start items-center space-y-6 md:space-y-5">
-							<h1 className="md:text-6xl text-5xl font-medium text-foreground">
+							<h1 className="md:text-6xl text-5xl font-medium md:leading-tight text-foreground">
 								Manage your expenses & budgets seamlessly.
 							</h1>
 							<p className="text-muted-foreground">
@@ -44,11 +45,13 @@ export default function Home() {
 								rel="noopener noreferrer"
 								className="mt-4"
 							>
-								<Button variant="secondary" className="h-14 space-x-2">
+								<Button variant="secondary" className="h-14 space-x-2 px-4">
 									<Apple className="h-4 w-4 dark:fill-white" />
-									<div className="flex flex-col text-left font-bold leading-5 ">
-										<div>Download on the</div>
-										<div className="text-xl leading-4 tracking-wider">
+									<div className="flex flex-col text-left">
+										<div className="font-semibold leading-4">
+											Download on the
+										</div>
+										<div className="text-2xl font-bold leading-6">
 											App Store
 										</div>
 									</div>
@@ -83,12 +86,12 @@ export default function Home() {
 
 					<section className="flex flex-row flex-wrap">
 						{features.map(({ name, imageSrc, key }) => (
-							<div className="flex w-1/2 md:w-1/4 p-2" key={key}>
+							<div className="flex w-1/2 md:w-1/4 p-2 -z-10" key={key}>
 								<div className="relative h-full">
-									<div className="bg-muted-background border-muted-foreground border rounded-2xl md:rounded-3xl h-full bg-opacity-20 overflow-hidden">
+									<div className="bg-[#2E2E33]/25 h-full bg-opacity-20 overflow-hidden border rounded-2xl md:rounded-3xl border-[#A8AAB2]/25">
 										<img src={imageSrc} alt={key} />
 									</div>
-									<div className="absolute bottom-0 left-0 right-0 pb-4 text-center md:text-lg text-xs text-foreground font-bold">
+									<div className="absolute bottom-0 left-0 right-0 pb-4 text-center md:text-xl text-md text-foreground font-bold">
 										{name}
 									</div>
 								</div>
@@ -97,7 +100,7 @@ export default function Home() {
 					</section>
 
 					<section className="max-w-xl">
-						<div className="text-muted-foreground text-xl">
+						<div className="text-muted-foreground text-2xl">
 							Track your expenses, set financial goals, scan receipts and get
 							personalized insights to helps you make better financial
 							decisions.
@@ -107,31 +110,33 @@ export default function Home() {
 			</div>
 
 			<div className="flex justify-center py-20 md:py-40">
-				<div className="flex max-w-4xl items-start flex-col">
-					<div className="flex w-full flex-col space-y-10">
-						<section className="flex w-full flex-col">
+				<div className="flex max-w-4xl items-start flex-col w-full">
+					<div className="flex w-full flex-col space-y-10 ">
+						<section className="flex flex-col">
 							<div className="flex flex-row space-x-10 items-center">
-								<div className="text-foreground text-5xl font-medium leading-tight">
+								<div className="text-foreground text-6xl font-medium leading-tight">
 									Get 6pm
 									<br /> for Free.
 								</div>
 								<div className="group relative">
-									<img
-										src="/download.svg"
-										alt="download"
-										className=" group-hover:opacity-0 transition-opacity duration-300 ease-in-out"
-									/>
-									<img
-										src="/download-hover.svg"
-										alt="download"
-										className="opacity-0 group-hover:opacity-100 absolute top-0 left-0 transition-opacity duration-300 ease-in-out"
-									/>
+									<a href={IOS_STORE_URL} rel="noopener noreferrer">
+										<img
+											src="/download.svg"
+											alt="download"
+											className=" group-hover:opacity-0 transition-opacity duration-700 ease-linear"
+										/>
+										<img
+											src="/download-hover.svg"
+											alt="download"
+											className="opacity-0 group-hover:opacity-100 absolute top-0 left-0 transition-opacity duration-700 ease-linear"
+										/>
+									</a>
 								</div>
 							</div>
 						</section>
 
 						<section>
-							<div className="text-muted-foreground text-xl">
+							<div className="text-muted-foreground text-2xl max-w-3xl">
 								6pm is free to download and use. We offer premium subscription
 								plans for advanced features, primarily to cover AI server costs,
 								starting at just $1.99 per month. 6pm is proudly{" "}
