@@ -5,7 +5,7 @@ import { Inter } from "next/font/google";
 import { PHProvider } from "@/components/PHProvider";
 import { Header } from "@/components/header";
 
-const beVietnamPro = Inter({
+const interFont = Inter({
 	subsets: ["latin"],
 	weight: ["300", "400", "500", "600"],
 });
@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       {!isDev ? <Analytics /> : null}
       <PHProvider>
-        <body className={`${beVietnamPro.className} bg-white dark:bg-background`}>
+				<body className={`${interFont.className} bg-white dark:bg-background`}>
           <div className="isolate min-h-screen">
             <Header />
             {children}

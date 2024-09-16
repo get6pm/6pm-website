@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@/components/button";
 import { Apple } from "@/components/icons/apple";
-import { IOS_STORE_URL } from "@/lib/constant";
+import { DISCORD_6PM, GITHUB_6PM, IOS_STORE_URL } from "@/lib/constant";
 
 const features = [
 	{
@@ -40,7 +40,7 @@ export default function Home() {
 								We've just launched! Get your AI finance assistant for free.
 							</p>
 							<a
-								href="https://apps.apple.com/vn/app/6pm-finance-intelligence/id6504689878"
+								href={IOS_STORE_URL}
 								target="_blank"
 								rel="noopener noreferrer"
 								className="mt-4"
@@ -141,7 +141,7 @@ export default function Home() {
 								plans for advanced features, primarily to cover AI server costs,
 								starting at just $1.99 per month. 6pm is proudly{" "}
 								<a
-									href="https://github.com/get6pm/6pm"
+									href={GITHUB_6PM}
 									rel="noopener noreferrer"
 									target="_blank"
 									className="underline underline-offset-4 text-zinc-50"
@@ -159,7 +159,7 @@ export default function Home() {
 								</a>{" "}
 								or on our{" "}
 								<a
-									href="https://discord.com/invite/RsANf429aQ"
+									href={DISCORD_6PM}
 									rel="noopener noreferrer"
 									target="_blank"
 									className="underline underline-offset-4 text-zinc-50"
