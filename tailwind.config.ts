@@ -15,7 +15,6 @@ const config: Config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        opacityBackground: "hsl(var(--muted-background), 0.25)",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -32,7 +31,6 @@ const config: Config = {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
           background: "hsl(var(--muted-background))",
-          border: "hsl(var(--muted-foreground), 0.25)",
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",

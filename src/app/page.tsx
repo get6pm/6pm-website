@@ -88,7 +88,7 @@ export default function Home() {
 						{features.map(({ name, imageSrc, key }) => (
 							<div className="flex w-1/2 md:w-1/4 p-2 -z-10" key={key}>
 								<div className="relative h-full">
-									<div className="bg-opacityBackground h-full overflow-hidden border rounded-2xl md:rounded-3xl border-muted-border">
+									<div className="bg-muted-background/25 h-full overflow-hidden border rounded-2xl md:rounded-3xl border-muted-foreground/25">
 										<img src={imageSrc} alt={key} />
 									</div>
 									<div className="absolute bottom-0 left-0 right-0 pb-4 text-center md:text-xl text-md text-foreground font-bold">
