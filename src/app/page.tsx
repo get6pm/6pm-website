@@ -120,7 +120,7 @@ export default function Home() {
 									for Free.
 								</div>
 								<div className="group relative">
-									<a href={IOS_STORE_URL} rel="noopener noreferrer">
+									<a href={IOS_STORE_URL} rel="noopener noreferrer" target="_blank">
 										<img
 											src="/download.svg"
 											alt="download"
