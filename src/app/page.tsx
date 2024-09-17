@@ -88,7 +88,7 @@ export default function Home() {
 						{features.map(({ name, imageSrc, key }) => (
 							<div className="flex w-1/2 md:w-1/4 p-2 -z-10" key={key}>
 								<div className="relative h-full">
-									<div className="bg-[#2E2E33]/25 h-full bg-opacity-20 overflow-hidden border rounded-2xl md:rounded-3xl border-[#A8AAB2]/25">
+									<div className="bg-opacityBackground h-full overflow-hidden border rounded-2xl md:rounded-3xl border-muted-border">
 										<img src={imageSrc} alt={key} />
 									</div>
 									<div className="absolute bottom-0 left-0 right-0 pb-4 text-center md:text-xl text-md text-foreground font-bold">
@@ -113,14 +113,18 @@ export default function Home() {
 				<div className="flex max-w-4xl items-start flex-col w-full">
 					<div className="flex w-full flex-col space-y-10 ">
 						<section className="flex flex-col">
-							<div className="flex md:flex-row flex-col gap-10 items-center">
+							<div className="flex md:flex-row flex-col gap-10 items-start md:items-center">
 								<div className="text-foreground text-6xl font-medium leading-tight">
 									Get 6pm
 									<br />
 									for Free.
 								</div>
 								<div className="group relative">
-									<a href={IOS_STORE_URL} rel="noopener noreferrer" target="_blank">
+									<a
+										href={IOS_STORE_URL}
+										rel="noopener noreferrer"
+										target="_blank"
+									>
 										<img
 											src="/download.svg"
 											alt="download"
