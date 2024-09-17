@@ -1,34 +1,23 @@
-import { GithubIcon } from "./icons/github";
-import { XIcon } from "./icons/x";
+import { IOS_STORE_URL } from "@/lib/constant";
+import { Button } from "./button";
+import Link from "next/link";
 
 export function Header() {
-  return (
-    <div>
-      <div className="fixed pointer-events-none z-40 inset-0 h-20 bg-[hsla(0,0%,4%,.2)] backdrop-blur-md [maskImage:linear-gradient(to_bottom,#000_20%,transparent_calc(100%-20%))]" />
-      <header className="fixed max-w-4xl flex items-center gap-4 justify-between mx-auto overflow-hidden top-4 z-50 h-12 backdrop-blur-xl saturate-150 shadow-[0_0_0_1px_hsla(0,0%,100%,.08)] left-4 right-4 px-3 bg-[hsla(0,0%,4%,.2)] rounded-2xl">
-        <a href="/" className="flex items-center gap-2">
-          <img src="/logo.svg" alt="6pm" className="h-8 w-8" />
-          <div className="text-zinc-50">6pm</div>
-        </a>
-        <nav className="flex items-center gap-2">
-          <a
-            href="https://x.com/6pmai"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex h-9 w-9 items-center justify-center"
-          >
-            <XIcon className="h-4 w-4 fill-white" />
-          </a>
-          <a
-            href="https://github.com/sixpm-ai/6pm"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex h-9 w-9 items-center justify-center"
-          >
-            <GithubIcon className="h-4 w-4 fill-white" />
-          </a>
-        </nav>
-      </header>
-    </div>
-  )
+	return (
+		<header className="sticky mx-auto z-50 top-0 saturate-100 border-b border-border backdrop-blur supports-[backdrop-filter]:bg-background/60">
+			<div className="container flex justify-between items-center max-w-4xl w-full mx-auto h-16 px-4 md:px-0">
+				<Link href="/" className="flex items-center gap-3">
+					<img src="/logo.svg" alt="6pm" className="h-9 w-9" />
+					<div className="text-foreground text-xl font-medium">6pm</div>
+				</Link>
+				<nav className="flex items-center gap-3">
+					<a href={IOS_STORE_URL} rel="noopener noreferrer" target="_blank">
+						<Button className="w-32 justify-center font-semibold">
+							Download
+						</Button>
+					</a>
+				</nav>
+			</div>
+		</header>
+	);
 }
