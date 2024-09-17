@@ -32,7 +32,7 @@ export default function Home() {
 			<div className="flex justify-center">
 				<div className="flex md:flex-row flex-col max-w-4xl w-full">
 					<section className="flex h-full flex-col pt-20 md:w-2/3 w-full">
-						<div className="flex flex-col md:items-start items-center space-y-6 md:space-y-5">
+						<div className="flex flex-col items-start  space-y-6 md:space-y-5">
 							<h1 className="md:text-6xl text-5xl font-medium md:leading-tight text-foreground">
 								Manage your expenses & budgets seamlessly.
 							</h1>
@@ -113,10 +113,11 @@ export default function Home() {
 				<div className="flex max-w-4xl items-start flex-col w-full">
 					<div className="flex w-full flex-col space-y-10 ">
 						<section className="flex flex-col">
-							<div className="flex flex-row space-x-10 items-center">
+							<div className="flex md:flex-row flex-col gap-10 items-center">
 								<div className="text-foreground text-6xl font-medium leading-tight">
 									Get 6pm
-									<br /> for Free.
+									<br />
+									for Free.
 								</div>
 								<div className="group relative">
 									<a href={IOS_STORE_URL} rel="noopener noreferrer">
