@@ -32,7 +32,7 @@ const config: Config = {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
           background: "hsl(var(--muted-background))",
-          border: "hsl(var(--muted-foreground),0.25)",
+          border: "hsl(var(--muted-foreground), 0.25)",
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",

@@ -65,7 +65,7 @@ export default function Home() {
 							<div className="pointer-events-none absolute left-0 top-[-100px] z-[-1] h-full w-full bg-[radial-gradient(100%_100%_at_50%_50%,hsl(0deg_0%_100%/8%)_0,hsl(0deg_0%_100%/2%)_50%)] blur-2xl md:left-[-100px] md:h-[calc(100%+200px)] md:w-[calc(100%+200px)]" />
 							<div className="flex items-center justify-center ">
 								<img
-									src="/demo-ui.svg"
+									src="/hero-mobile.png"
 									alt="Hero"
 									className="h-full w-full -z-10"
 								/>
